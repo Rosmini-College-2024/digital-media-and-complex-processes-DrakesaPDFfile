@@ -29,3 +29,5 @@ func move(delta)-> void:
 	velocity *= speed
 	
 	move_and_slide()
+	
+

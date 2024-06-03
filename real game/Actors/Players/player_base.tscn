@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://plvlp0tt017u"]
+[gd_scene load_steps=4 format=3 uid="uid://plvlp0tt017u"]
 
 [ext_resource type="PackedScene" uid="uid://opewkg7rhkeh" path="res://Actors/Character/character.tscn" id="1_bpfn6"]
 [ext_resource type="Script" path="res://Actors/Players/player_base.gd" id="2_oy5jy"]
+[ext_resource type="PackedScene" uid="uid://0lqvqhar2dvu" path="res://Actors/Objects/gun.tscn" id="3_xhvxd"]
 
 [node name="Player_Base" instance=ExtResource("1_bpfn6")]
 script = ExtResource("2_oy5jy")
 speed = 100.0
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+[node name="Gun" parent="." index="3" instance=ExtResource("3_xhvxd")]
