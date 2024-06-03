@@ -6,3 +6,5 @@
 [node name="Player_Base" instance=ExtResource("1_bpfn6")]
 script = ExtResource("2_oy5jy")
 speed = 100.0
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
