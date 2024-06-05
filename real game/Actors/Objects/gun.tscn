@@ -24,7 +24,7 @@ texture = ExtResource("1_wsl24")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/ZaDagun"]
 unique_name_in_owner = true
-position = Vector2(237.133, -101.628)
+position = Vector2(170.512, -102.307)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5

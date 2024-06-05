@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg1bkhcio3lds"]
+
+[ext_resource type="Script" path="res://Worlds/World_Base/world_base.gd" id="1_0ramp"]
+[ext_resource type="PackedScene" uid="uid://plvlp0tt017u" path="res://Actors/Players/player_base.tscn" id="1_vrmud"]
+[ext_resource type="PackedScene" uid="uid://djqe480j0athr" path="res://Worlds/Map/tile_map.tscn" id="1_xg2ji"]
+
+[sub_resource type="Curve2D" id="Curve2D_hxutv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -53, -65, 0, 0, 0, 0, 1200, -67, 0, 0, 0, 0, 1209, 710, 0, 0, 0, 0, -61, 715, 0, 0, 0, 0, -54, -68, 0, 0, 0, 0, -53, -65)
+}
+point_count = 6
+
+[node name="world_base" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0ramp")
+
+[node name="TileMap" parent="." instance=ExtResource("1_xg2ji")]
+
+[node name="Player_Base" parent="." instance=ExtResource("1_vrmud")]
+position = Vector2(576, 323)
+scale = Vector2(0.56, 0.56)
+speed = 300.0
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_hxutv")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+unique_name_in_owner = true
+position = Vector2(-53, -65)
+rotation = -0.00159617
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
