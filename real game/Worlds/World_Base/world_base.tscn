@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bg1bkhcio3lds"]
 
-[ext_resource type="Script" path="res://Worlds/World_Base/world_base.gd" id="1_0ramp"]
+[ext_resource type="Script" path="res://Worlds/World_Base/world_base.gd" id="1_0jxa4"]
 [ext_resource type="PackedScene" uid="uid://plvlp0tt017u" path="res://Actors/Players/player_base.tscn" id="1_vrmud"]
 [ext_resource type="PackedScene" uid="uid://djqe480j0athr" path="res://Worlds/Map/tile_map.tscn" id="1_xg2ji"]
 
@@ -13,7 +13,7 @@ point_count = 6
 [node name="world_base" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_0ramp")
+script = ExtResource("1_0jxa4")
 
 [node name="TileMap" parent="." instance=ExtResource("1_xg2ji")]
 
@@ -31,7 +31,7 @@ position = Vector2(-53, -65)
 rotation = -0.00159617
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.658
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

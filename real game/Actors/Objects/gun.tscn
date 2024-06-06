@@ -1,18 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://0lqvqhar2dvu"]
 
-[ext_resource type="Script" path="res://Actors/Objects/gun.gd" id="1_adxcq"]
-[ext_resource type="Texture2D" uid="uid://bg2rpwkvrrj2x" path="res://Assests/objects/za dagun.png" id="1_wsl24"]
+[ext_resource type="Script" path="res://Actors/Objects/gun.gd" id="1_l5tok"]
+[ext_resource type="Texture2D" uid="uid://dj5oh4j5v83yw" path="res://Assests/objects/za dagun.png" id="2_doykx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_en28a"]
 radius = 625.039
 
 [node name="Gun" type="Area2D"]
+scale = Vector2(0.992037, 1)
 collision_layer = 0
-collision_mask = 2
-script = ExtResource("1_adxcq")
+collision_mask = 3
+script = ExtResource("1_l5tok")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.994513, 0.992147)
+scale = Vector2(1.30336, 1.319)
 shape = SubResource("CircleShape2D_en28a")
 
 [node name="WeaponPivot" type="Marker2D" parent="."]
@@ -20,14 +21,14 @@ shape = SubResource("CircleShape2D_en28a")
 [node name="ZaDagun" type="Sprite2D" parent="WeaponPivot"]
 position = Vector2(129, 2.27374e-13)
 scale = Vector2(0.17594, 0.17594)
-texture = ExtResource("1_wsl24")
+texture = ExtResource("2_doykx")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/ZaDagun"]
 unique_name_in_owner = true
-position = Vector2(170.512, -102.307)
+position = Vector2(200.685, -96.6238)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.75
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

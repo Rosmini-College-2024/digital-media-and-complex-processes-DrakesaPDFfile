@@ -1,3 +1,6 @@
 res://survivorsgame.tscn
 res://player.tscn
 res://characters/happy_boo/happy_boo.tscn
+res://mob.tscn
+res://gun.tscn
+res://bullet.tscn

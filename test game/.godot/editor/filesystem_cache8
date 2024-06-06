@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717377790
+::res://::1717657876
 bullet.tscn::PackedScene::7793419677224257080::1716218216::0::1::::<><>::res://scripts/Bullet.gd<>uid://dftkbqwsfd68r::::res://pistol/projectile.png
 default_bus_layout.tres::AudioBusLayout::6564268947468103023::1695664579::0::1::::<><>::
 gun.tscn::PackedScene::5399170799151761047::1716218216::0::1::::<><>::res://scripts/gun.gd<>uid://cswb5do8rrj7q::::res://pistol/pistol.png
