@@ -1,10 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://plvlp0tt017u"]
+[gd_scene load_steps=7 format=3 uid="uid://plvlp0tt017u"]
 
 [ext_resource type="PackedScene" uid="uid://opewkg7rhkeh" path="res://Actors/Character/character.tscn" id="1_bpfn6"]
 [ext_resource type="Script" path="res://Actors/Players/player_base.gd" id="2_oy5jy"]
 [ext_resource type="PackedScene" uid="uid://0lqvqhar2dvu" path="res://Actors/Objects/gun.tscn" id="3_xhvxd"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5tm24"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rg6my"]
+size = Vector2(126, 123)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sef1w"]
+bg_color = Color(0.439049, 0.439049, 0.439049, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_828sq"]
+bg_color = Color(0.938901, 0.400518, 0.426847, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="Player_Base" instance=ExtResource("1_bpfn6")]
 script = ExtResource("2_oy5jy")
@@ -20,6 +35,21 @@ collision_mask = 2
 
 [node name="HurtBox" type="Area2D" parent="." index="4"]
 unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" index="0"]
-shape = SubResource("CircleShape2D_5tm24")
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rg6my")
+debug_color = Color(0.915509, 0.226149, 0.461547, 0.42)
+
+[node name="ProgressBar" type="ProgressBar" parent="." index="5"]
+unique_name_in_owner = true
+offset_left = -114.0
+offset_top = -98.0
+offset_right = 113.0
+offset_bottom = -73.0
+theme_override_styles/background = SubResource("StyleBoxFlat_sef1w")
+theme_override_styles/fill = SubResource("StyleBoxFlat_828sq")
+value = 100.0
+show_percentage = false

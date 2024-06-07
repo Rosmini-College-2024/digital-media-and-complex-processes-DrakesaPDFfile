@@ -25,10 +25,9 @@ texture = ExtResource("2_doykx")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/ZaDagun"]
 unique_name_in_owner = true
-position = Vector2(200.685, -96.6238)
+position = Vector2(166.308, -96.6238)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.75
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
