@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bg1bkhcio3lds"]
+[gd_scene load_steps=6 format=3 uid="uid://bg1bkhcio3lds"]
 
 [ext_resource type="Script" path="res://Worlds/World_Base/world_base.gd" id="1_0jxa4"]
 [ext_resource type="PackedScene" uid="uid://plvlp0tt017u" path="res://Actors/Players/player_base.tscn" id="1_vrmud"]
 [ext_resource type="PackedScene" uid="uid://djqe480j0athr" path="res://Worlds/Map/tile_map.tscn" id="1_xg2ji"]
+[ext_resource type="PackedScene" uid="uid://bm53sqmvxwlu8" path="res://Worlds/Map/procedual_gen.tscn" id="2_84tve"]
 
 [sub_resource type="Curve2D" id="Curve2D_hxutv"]
 _data = {
@@ -15,7 +16,10 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_0jxa4")
 
+[node name="ProcedualGen" parent="." instance=ExtResource("2_84tve")]
+
 [node name="TileMap" parent="." instance=ExtResource("1_xg2ji")]
+visible = false
 
 [node name="Player_Base" parent="." instance=ExtResource("1_vrmud")]
 position = Vector2(576, 323)

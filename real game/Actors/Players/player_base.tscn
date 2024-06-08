@@ -29,6 +29,7 @@ speed = 100.0
 scale = Vector2(1.09091, 1.08)
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
+scale = Vector2(-5.5554, 22.5333)
 
 [node name="Gun" parent="." index="3" instance=ExtResource("3_xhvxd")]
 collision_mask = 2
