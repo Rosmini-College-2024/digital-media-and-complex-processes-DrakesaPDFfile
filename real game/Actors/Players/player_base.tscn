@@ -29,7 +29,8 @@ speed = 100.0
 scale = Vector2(1.09091, 1.08)
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
-scale = Vector2(-5.5554, 22.5333)
+scale = Vector2(-5.5554, 22.3571)
+zoom = Vector2(1.5, 1.5)
 
 [node name="Gun" parent="." index="3" instance=ExtResource("3_xhvxd")]
 collision_mask = 2
@@ -54,3 +55,4 @@ theme_override_styles/background = SubResource("StyleBoxFlat_sef1w")
 theme_override_styles/fill = SubResource("StyleBoxFlat_828sq")
 value = 100.0
 show_percentage = false
+metadata/_edit_use_anchors_ = true
