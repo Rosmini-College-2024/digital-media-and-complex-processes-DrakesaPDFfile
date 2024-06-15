@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0pqg88fn4ama"]
+
+[ext_resource type="Script" path="res://Worlds/Misc/Main Menu.gd" id="1_baybw"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_baybw")
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="New" type="Button" parent="Button_manager"]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 186.0
+offset_right = 670.0
+offset_bottom = 254.0
+text = "New Game
+"
+
+[node name="Options" type="Button" parent="Button_manager"]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 301.0
+offset_right = 669.0
+offset_bottom = 368.0
+text = "Options
+"
+
+[node name="Quit" type="Button" parent="Button_manager"]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 418.0
+offset_right = 669.0
+offset_bottom = 482.0
+text = "Quit
+"
+
+[connection signal="pressed" from="Button_manager/New" to="." method="_on_new_pressed"]
+[connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]

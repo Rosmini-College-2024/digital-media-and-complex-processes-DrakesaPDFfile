@@ -13,4 +13,8 @@ func _on_timer_timeout():
 
 func _on_player_base_health_depleted():
 	%GameOver.visible = true
-	get_tree().paused = true
+	$Player_Base.visible = false
+	
+func _on_restart_pressed():
+	get_tree().change_scene_to_file("res://Worlds/Misc/main_menu.tscn")
+
