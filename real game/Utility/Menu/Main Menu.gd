@@ -1,7 +1,7 @@
 extends Node2D
 
 func _on_new_pressed():
-	get_tree().change_scene_to_packed(load("res://Worlds/Misc/loading_screen.tscn"))
+	get_tree().change_scene_to_packed(load("res://Utility/Loading Screen/loading_screen.tscn"))
 
 func _on_options_pressed():
 	pass

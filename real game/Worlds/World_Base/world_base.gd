@@ -16,5 +16,5 @@ func _on_player_base_health_depleted():
 	$Player_Base.visible = false
 	
 func _on_restart_pressed():
-	get_tree().change_scene_to_file("res://Worlds/Misc/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Utility/Menu/main_menu.tscn")
 

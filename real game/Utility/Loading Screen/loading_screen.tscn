@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ipkuvmvlg2c5"]
 
-[ext_resource type="Script" path="res://Worlds/Misc/loading_screen.gd" id="1_t76ew"]
+[ext_resource type="Script" path="res://Utility/Loading Screen/loading_screen.gd" id="1_t76ew"]
 
 [node name="loading_screen" type="Control"]
 layout_mode = 3

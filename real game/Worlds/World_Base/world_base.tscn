@@ -34,10 +34,6 @@ unique_name_in_owner = true
 position = Vector2(-53, -65)
 rotation = -0.00159617
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.865
-autostart = true
-
 [node name="GameOver" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
 visible = false
@@ -83,6 +79,9 @@ theme_override_font_sizes/font_size = 40
 text = "Restart
 "
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.865
+
 [connection signal="health_depleted" from="Player_Base" to="." method="_on_player_base_health_depleted"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="GameOver/ColorRect/Restart" to="." method="_on_restart_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

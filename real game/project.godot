@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="real game"
-run/main_scene="res://Worlds/World_Base/world_base.tscn"
+run/main_scene="res://Utility/Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
